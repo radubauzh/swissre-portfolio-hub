@@ -1,9 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
-import { Calendar, Filter, Download } from 'lucide-react'
 
 const portfolioData = [
   { treaty: 'DE-LIFE-001', premium: 120, claims: 78, ratio: 65, retention: 95 },
@@ -31,36 +29,12 @@ const trendData = [
 ]
 
 export default function PortfolioAnalytics() {
-  const [selectedPeriod, setSelectedPeriod] = useState('ytd')
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Portfolio Analytics</h2>
           <p className="text-gray-600 mt-1">Deep dive into portfolio performance metrics</p>
-        </div>
-        
-        <div className="flex items-center gap-4">
-          <select
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-re-500 text-gray-900 bg-white"
-            value={selectedPeriod}
-            onChange={(e) => setSelectedPeriod(e.target.value)}
-          >
-            <option value="ytd">Year to Date</option>
-            <option value="q4">Q4 2024</option>
-            <option value="2024">Full Year 2024</option>
-          </select>
-          
-          <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-900">
-            <Filter className="h-4 w-4" />
-            Filters
-          </button>
-          
-          <button className="flex items-center gap-2 px-4 py-2 bg-swiss-re-600 text-white rounded-lg hover:bg-swiss-re-700">
-            <Download className="h-4 w-4" />
-            Export
-          </button>
         </div>
       </div>
 

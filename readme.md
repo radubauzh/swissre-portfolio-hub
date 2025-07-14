@@ -1,8 +1,16 @@
 # ReInsight - Portfolio Analytics Platform
 
+## 🌟 Built for Swiss Re
+
+ReInsight is a cutting-edge portfolio monitoring and analytics platform designed specifically to showcase expertise in data analytics, risk management, and modern web development for Swiss Re's Portfolio Monitoring & Insights Intern position.
+
+---
+
 ## 🚀 Overview
 
-ReInsight is a cutting-edge portfolio monitoring and analytics platform designed specifically for reinsurance portfolio management. Built to showcase expertise in data analytics, risk management, and modern web development for Swiss Re's Portfolio Monitoring & Insights Intern position.
+ReInsight combines advanced analytics, AI-powered insights, and intuitive visualizations to address real-world challenges in reinsurance portfolio management. This project demonstrates technical excellence, domain knowledge, and a deep understanding of Swiss Re's business needs.
+
+---
 
 ## 🎯 Key Features
 
@@ -36,6 +44,8 @@ ReInsight is a cutting-edge portfolio monitoring and analytics platform designed
 - Severity classification
 - Investigation workflow
 
+---
+
 ## 🛠️ Technology Stack
 
 - **Frontend Framework**: Next.js 14 (App Router)
@@ -46,6 +56,8 @@ ReInsight is a cutting-edge portfolio monitoring and analytics platform designed
 - **Data Fetching**: React Query
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
+
+---
 
 ## 📦 Installation
 
@@ -67,6 +79,8 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+---
+
 ## 🚀 Deployment on Vercel
 
 1. Push your code to GitHub
@@ -74,6 +88,8 @@ npm run dev
 3. Deploy with default settings
 
 The application is optimized for Vercel deployment with automatic CI/CD.
+
+---
 
 ## 📁 Project Structure
 
@@ -95,6 +111,8 @@ src/
     └── utils.ts         # Utility functions
 ```
 
+---
+
 ## 🎨 Features Showcase
 
 ### Data Ingestion & Monitoring
@@ -112,6 +130,8 @@ src/
 - Anomaly detection algorithms
 - Actionable insights generation
 
+---
+
 ## 🔧 Configuration
 
 The application uses mock data to demonstrate functionality. In a production environment, you would connect to:
@@ -120,6 +140,8 @@ The application uses mock data to demonstrate functionality. In a production env
 - Database systems
 - ML/AI services
 
+---
+
 ## 📊 Performance Metrics
 
 - **Lighthouse Score**: 95+ (Performance)
@@ -127,9 +149,11 @@ The application uses mock data to demonstrate functionality. In a production env
 - **Time to Interactive**: < 2s
 - **Accessibility**: WCAG 2.1 compliant
 
+---
+
 ## 🏆 Why This Project?
 
-This project demonstrates:
+This project is a showcase for Swiss Re, demonstrating:
 
 1. **Technical Excellence**: Modern tech stack with best practices
 2. **Domain Knowledge**: Understanding of reinsurance concepts and L&H business
@@ -138,13 +162,29 @@ This project demonstrates:
 5. **User Experience**: Intuitive interface for complex data
 6. **Scalability**: Architecture ready for enterprise deployment
 
+---
+
+## 🌐 About the Developer
+
+### Rafael Dubach
+
+- **LinkedIn**: [https://www.linkedin.com/in/rafael-dubach/](https://www.linkedin.com/in/rafael-dubach/)
+- **Portfolio**: [https://rafaeldubach.com/](https://rafaeldubach.com/)
+- **Google Scholar**: [https://scholar.google.com/citations?user=HX_O1rAAAAAJ&hl=en](https://scholar.google.com/citations?user=HX_O1rAAAAAJ&hl=en)
+
+---
+
 ## 📝 License
 
 MIT License - feel free to use this project as inspiration for your own portfolio!
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
 
 ## 📧 Contact
 
