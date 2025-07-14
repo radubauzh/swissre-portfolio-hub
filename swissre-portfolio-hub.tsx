@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Globe, DollarSign, Activity, Users, Shield, Target, Calendar, FileText, Download, Settings, Bell, BarChart3 } from 'lucide-react';
 
 const SwissRePortfolioHub = () => {
-  const [selectedRegion, setSelectedRegion] = useState('EMEA');
+  const [selectedRegion, setSelectedRegion] = useState<'EMEA' | 'Americas' | 'Asia-Pacific'>('EMEA');
   const [timeRange, setTimeRange] = useState('12M');
   const [activeTab, setActiveTab] = useState('overview');
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -203,7 +203,7 @@ const SwissRePortfolioHub = () => {
 
   const currentData = portfolioData[selectedRegion];
 
-  const formatCurrency = (value) => {
+  const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -212,11 +212,11 @@ const SwissRePortfolioHub = () => {
     }).format(value);
   };
 
-  const formatPercentage = (value) => {
+  const formatPercentage = (value: number) => {
     return (value * 100).toFixed(1) + '%';
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-emerald-700 bg-emerald-50 border-emerald-200';
       case 'good': return 'text-teal-700 bg-teal-50 border-teal-200';
@@ -232,7 +232,7 @@ const SwissRePortfolioHub = () => {
     }
   };
 
-  const getAlertIcon = (type) => {
+  const getAlertIcon = (type: string) => {
     switch (type) {
       case 'warning': return <AlertTriangle className="h-5 w-5 text-amber-500" />;
       case 'opportunity': return <TrendingUp className="h-5 w-5 text-emerald-500" />;
@@ -351,7 +351,7 @@ const SwissRePortfolioHub = () => {
                     <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                     <XAxis dataKey="month" stroke="#64748b" />
                     <YAxis domain={[0.6, 0.8]} tickFormatter={formatPercentage} stroke="#64748b" />
-                    <Tooltip formatter={(value) => value ? formatPercentage(value) : 'N/A'} />
+                    <Tooltip formatter={(value) => value && typeof value === 'number' ? formatPercentage(value) : 'N/A'} />
                     <Legend />
                     <Line type="monotone" dataKey="EMEA" stroke="#047857" strokeWidth={3} dot={{ fill: '#047857', strokeWidth: 2, r: 4 }} />
                     <Line type="monotone" dataKey="Americas" stroke="#0d9488" strokeWidth={3} dot={{ fill: '#0d9488', strokeWidth: 2, r: 4 }} />
@@ -538,7 +538,7 @@ const SwissRePortfolioHub = () => {
             <div className="flex items-center space-x-4">
               <select 
                 value={selectedRegion} 
-                onChange={(e) => setSelectedRegion(e.target.value)}
+                onChange={(e) => setSelectedRegion(e.target.value as 'EMEA' | 'Americas' | 'Asia-Pacific')}
                 className="px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
               >
                 <option value="EMEA">EMEA</option>
