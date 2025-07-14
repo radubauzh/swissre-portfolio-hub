@@ -6,9 +6,15 @@ import PerformanceChart from './PerformanceChart'
 import PortfolioOverview from './PortfolioOverview'
 import AlertsPanel from './AlertsPanel'
 import RegionalHeatmap from './RegionalHeatmap'
-import { TrendingUp, TrendingDown, DollarSign, Shield, AlertCircle, Activity } from 'lucide-react'
+import { TrendingUp, TrendingDown, DollarSign, Shield, AlertCircle, Activity, LucideIcon } from 'lucide-react'
 
-const metrics = [
+const metrics: Array<{
+  title: string;
+  value: string;
+  change: number;
+  icon: LucideIcon;
+  trend: 'up' | 'down';
+}> = [
   {
     title: 'Total Portfolio Value',
     value: '$2.3B',
@@ -44,7 +50,7 @@ export default function Dashboard() {
     <div className="space-y-6">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Portfolio Dashboard</h2>
-        <p className="text-gray-600 mt-1">Continental Europe L&H Portfolio Overview</p>
+        <p className="text-gray-600 mt-1">Continental Europe L&amp;H Portfolio Overview</p>
       </div>
 
       <motion.div
