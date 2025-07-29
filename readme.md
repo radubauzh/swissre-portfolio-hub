@@ -192,4 +192,4 @@ For questions about this project or to discuss reinsurance analytics, please rea
 
 ---
 
-Built with ❤️ for Swiss Re's Portfolio Monitoring & Insights team
+Built for Swiss Re's Portfolio Monitoring & Insights team
